@@ -39,8 +39,9 @@ export const UI = () => {
         </a> 
 
       
-      <img src="images/pepeHigh.png" className="absolute top-1 left-6 w-14 h-14 
-      md:w-26 md:h-50 sm:w-14 sm:h-14" />
+      <img src="images/pepeHigh.png"
+            className="absolute top-0 left-6 w-26 h-50
+            md:w-26 md:h-50 sm:w-26 sm:h-50" />
     
     <div className="fixed inset-0 pointer-events-none">
       <section
