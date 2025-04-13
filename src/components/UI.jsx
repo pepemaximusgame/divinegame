@@ -16,16 +16,24 @@ export const UI = () => {
 
   return (
     <main>
-        <a href="https://dexscreener.com/">
+         <a href="https://dexscreener.com/">
         <img src="images/DexLogo.png" className="pointer-events-auto absolute 
-        top-16 right-40 w-8 h-8 transition
+        top-10 right-20 md:right-30 lg:right-30
+        w-4 h-4 
+        md:w-8 md:h-8 
+        lg:w-8 lg:h-8
+         transition
          duration-300 hover:scale-110 hover:rotate-5 
          hover:opacity-80" />
         </a>
 
         <a href="https://x.com/">
         <img src="images/xLogo.png" className="pointer-events-auto absolute 
-        top-16 right-30 w-8 h-8 transition 
+        top-10 right-15 md:right-20 lg:right-20 
+        w-4 h-4 
+        md:w-8 md:h-8 
+        lg:w-8 lg:h-8
+         transition 
         duration-300 hover:scale-110 hover:rotate-5 
         hover:opacity-80" />
         </a>
@@ -33,15 +41,24 @@ export const UI = () => {
         <a href="https://dexscreener.com/">
         <img src="images/teleLogo.png" 
         className="pointer-events-auto absolute 
-        top-16 right-20 w-8 h-8 transition 
+        top-10 right-10 md:right-10 lg:right-10
+        w-4 h-4 
+        md:w-8 md:h-8 
+        lg:w-8 lg:h-8
+        transition 
         duration-300 hover:scale-110 hover:rotate-5 
         hover:opacity-80" />
         </a> 
 
       
-      <img src="images/pepeHigh.png"
-            className="absolute top-0 left-6 w-26 h-50
-            md:w-26 md:h-50 sm:w-26 sm:h-50" />
+      <img src="images/pepeHigh.png" 
+      className="
+      absolute top-0 left-6 
+      w-13 h-26 
+      md:w-26 md:h-50 
+      lg:w-26 lg:h-50
+      " />
+
     
     <div className="fixed inset-0 pointer-events-none">
       <section

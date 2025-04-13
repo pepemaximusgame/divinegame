@@ -9,23 +9,37 @@ const bloomColor= new Color("#fff");
 bloomColor.multiplyScalar(1.5);
 
 export const Experience = () => {
-
+const meshFitCamera = useRef();
 const controls = useRef();
 const [animation, setAnimation] = useState("idle");
 //for Animatin of camera from far to near
 const intro = async () => {
   controls.current.dolly(-22);
   controls.current.smoothTime=1.6;
-  controls.current.dolly(22,true);
+  // controls.current.dolly(22,true);
+  fitCamera();
 }
 
+const fitCamera = async () =>{
+  controls.current.fitToBox(meshFitCamera.current,true);
+}
+ 
 useEffect(  ()=>{
     intro();
   },[]
 )
 
+useEffect(() => {
+window.addEventListener("resize",fitCamera);
+return () => {window.removeEventListener("resize", fitCamera);};
+},[]);
+
   return (
     <>
+    <mesh ref={meshFitCamera} position-z={1.5} visible={false}>
+      <boxGeometry args={[7.5,2,2]}/>
+      <meshBasicMaterial  color={"orange"} transparent opacity={0.3} />
+    </mesh>
       <CameraControls ref={controls} />
       
       
