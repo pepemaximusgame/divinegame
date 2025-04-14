@@ -12,6 +12,7 @@ export const Experience = () => {
 const meshFitCamera = useRef();
 const controls = useRef();
 const [animation, setAnimation] = useState("idle");
+const [animationFatty, setFattyAnimation] = useState("run");
 //for Animatin of camera from far to near
 const intro = async () => {
   controls.current.dolly(-22);
@@ -77,8 +78,8 @@ return () => {window.removeEventListener("resize", fitCamera);};
       <Character scale={0.7} color={'orange'} animation={animation}/>
       </group>
 
-      {/* <group rotation-y={degToRad(-40)} position-x={4.15} position-y={-0.6}>
-      <Spongebobfish scale={0.5} animation={animationFish}/>
+      {/* <group rotation-y={degToRad(-30)} position-x={3.55} position-y={-0.6}>
+      <Frog_peasant scale={0.6} color={'yellow'} animation={animationFatty}/>
       </group> */}
 
       <mesh position-y={-0.68} rotation-x={-Math.PI / 2}>

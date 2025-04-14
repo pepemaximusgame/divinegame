@@ -1,18 +1,29 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { textureCubeUV } from "three/src/nodes/TSL.js";
 
 export const UI = () => {
-
+  const location = useLocation();
   const [showButton, setShowButton] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
+     if(location.pathname !== '/home'){
     const timer = setTimeout(() => {
       setShowButton(true); // Show the button after 5 seconds
     }, 7000); // 5000ms = 5 seconds
+ 
 
     return () => clearTimeout(timer); // Cleanup the timer
+ }
+
   }, []);
+
+//   useEffect(() => {
+// if(location.pathname !== '/home'){
+//   setShowButton(false);
+// }
+//   },[])
 
   return (
     <main>
@@ -74,7 +85,7 @@ export const UI = () => {
         </button> */}
 
      {
-       showButton ?(  <button type="button"
+       showButton ?(  <button type="button" onClick={() => {navigate('/home')}}
           className="pointer-events-auto text-gray-900 
           bg-gradient-to-r from-teal-200 to-lime-200 
           hover:bg-gradient-to-l hover:from-teal-200

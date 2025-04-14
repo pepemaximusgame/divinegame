@@ -3,7 +3,7 @@
 import React, { useRef,useEffect } from 'react';
 import { useGLTF, useAnimations } from '@react-three/drei';
 import * as THREE from 'three';
-import { rgbShift } from 'three/examples/jsm/tsl/display/RGBShiftNode.js';
+//import { rgbShift } from 'three/examples/jsm/tsl/display/RGBShiftNode.js';
 
 export function Character({animation,color, ...props}) {
 
@@ -74,4 +74,4 @@ export function Character({animation,color, ...props}) {
   )
 }
 
-useGLTF.preload('models/toad_warrior.glb');
+// useGLTF.preload('models/toad_warrior.glb');
