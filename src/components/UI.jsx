@@ -27,7 +27,7 @@ export const UI = () => {
 
   return (
     <main>
-         <a href="https://dexscreener.com/">
+         <a href="https://pump.fun/coin/FTyT45YzDFMpZyvPQdmeMGyuNvWVCP3mT8gLZRDapump">
         <img src="images/DexLogo.png" className="pointer-events-auto absolute 
         top-10 right-20 md:right-30 lg:right-30
         w-4 h-4 
@@ -49,7 +49,7 @@ export const UI = () => {
         hover:opacity-80" />
         </a>
 
-        <a href="https://dexscreener.com/">
+        <a href="https://pump.fun/coin/FTyT45YzDFMpZyvPQdmeMGyuNvWVCP3mT8gLZRDapump">
         <img src="images/teleLogo.png" 
         className="pointer-events-auto absolute 
         top-10 right-10 md:right-10 lg:right-10
